@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "sample-next-proj": "apps/sample-next-proj",
-    "sample-next-proj-e2e": "apps/sample-next-proj-e2e"
+    "sample-next-proj-e2e": "apps/sample-next-proj-e2e",
+    "ui": "libs/ui"
   }
 }

@@ -29,7 +29,7 @@ jobs:
       - name: upload storybook-static
         run: |
           aws s3 cp --recursive \
-            ./storybook-static \
+            dist/storybook/ui \
             s3://${{ secrets.S3_BUCKET_NAME }}/storybook/${DEST_DIR}
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

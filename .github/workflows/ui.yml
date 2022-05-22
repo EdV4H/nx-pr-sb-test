@@ -2,10 +2,10 @@ name: ui pull request workflow
 on:
   push:
     branches: [main]
-    paths:
-      - "libs/ui/src/**"
   pull_request:
     types: [opened, reopend, synchronize, closed]
+    paths:
+      - "libs/ui/src/**"
   
 jobs:
   deploy:

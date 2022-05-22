@@ -2,13 +2,15 @@ name: ui pull request workflow
 on:
   push:
     branches: [main]
+    paths:
+    - "libs/ui/src/**"
   pull_request:
     types: [opened, reopend, synchronize, closed]
-
+  
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed' && contains(github.head_ref, 'ui')
+    if: github.event.action != 'closed'
     steps:
       # storybookのビルド
       - uses: actions/checkout@v2
@@ -50,7 +52,7 @@ jobs:
             })
   clean:
     runs-on: ubuntu-latest
-    if: github.event.action == 'closed' && contains(github.head_ref, 'ui')
+    if: github.event.action == 'closed'
     steps:
       - name: remove storybook-static
         run: |

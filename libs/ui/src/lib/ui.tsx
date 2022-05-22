@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 export interface UiProps {}
 
 const StyledUi = styled.div`
-  color: pink;
+  color: green;
 `;
 
 export function Ui(props: UiProps) {
